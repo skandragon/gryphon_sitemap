@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Michael Graff"]
   s.email       = ["explorer@flame.org"]
   s.homepage    = "http://github.com/skandragon/gryphon_sitemap"
-  s.summary     = "TODO: Summary of GryphonSitemap."
-  s.description = "TODO: Description of GryphonSitemap."
+  s.summary     = "Simple sitemaps for rails."
+  s.description = "Add simple sitemap support to models, and use generic or custom templates to render them."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
