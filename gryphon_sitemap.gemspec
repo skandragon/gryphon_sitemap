@@ -7,9 +7,9 @@ require "gryphon_sitemap/version"
 Gem::Specification.new do |s|
   s.name        = "gryphon_sitemap"
   s.version     = GryphonSitemap::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
+  s.authors     = ["Michael Graff"]
+  s.email       = ["explorer@flame.org"]
+  s.homepage    = "http://github.com/skandragon/gryphon_sitemap"
   s.summary     = "TODO: Summary of GryphonSitemap."
   s.description = "TODO: Description of GryphonSitemap."
 

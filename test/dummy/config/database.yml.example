@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: dummy_development
+  database: gryphon_sitemap_development
   pool: 5
   username: postgres
   password:
@@ -9,7 +9,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: dummy_test
+  database: gryphon_sitemap_test
   pool: 5
   username: postgres
   password:
