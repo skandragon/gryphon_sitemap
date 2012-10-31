@@ -200,5 +200,5 @@ Sitemap: http://eq2mission.flame.org/sitemap.xml
 ## Authors
 
 Michael Graff
-[twitter](http://twitter.com/skandragon)
-[github](http://github.com/skandragon)
+[twitter](https://twitter.com/skandragon)
+[github](https://github.com/skandragon)
