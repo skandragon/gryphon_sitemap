@@ -1,2 +1,1 @@
-module GryphonSitemap
-end
+require 'gryphon_sitemap/has_sitemap.rb'
