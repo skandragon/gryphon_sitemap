@@ -7,7 +7,7 @@ module GryphonSitemap
 
     def show
       item_name = params[:id]
-      found_index = indexed_pages[item_name.to_sym]
+      found_index = indexed_pages_cached[item_name.to_sym]
       page_not_found if found_index.blank?
 
       if respond_to?item_name
@@ -25,7 +25,7 @@ module GryphonSitemap
     end
 
     def fixup_missing_page_counts
-      indexed_pages.each do |item_name, options|
+      indexed_pages_cached.each do |item_name, options|
         next unless options[:dynamic].present?
 
         options[:pages] = item_name.to_s.classify.constantize.sitemap_page_count
