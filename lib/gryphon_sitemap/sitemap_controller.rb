@@ -1,7 +1,8 @@
 module GryphonSitemap
   module SitemapController
     def index
-      @indexes = indexed_pages
+      @indexes = indexed_pages_cached
+      fixup_missing_page_counts
     end
 
     def show
@@ -18,6 +19,10 @@ module GryphonSitemap
     end
 
     private
+    
+    def indexed_pages_cached
+      @cached_indexes ||= indexed_pages
+    end
 
     def fixup_missing_page_counts
       indexed_pages.each do |item_name, options|
