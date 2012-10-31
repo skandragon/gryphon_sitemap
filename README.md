@@ -38,7 +38,7 @@ this with:
 
     has_sitemap :per_page => 50
 
-To minimize database load, only :id and :updated\_at are retrieved.
+To minimize database load, only :id and :updated_at are retrieved.
 In some cases, these are not sufficient when a custom to_param method
 is used.  In these cases, you may add additional fields to fetch for
 each item:
@@ -49,7 +49,7 @@ This would be useful for a to_param such as:
 
 ```ruby
 def to_param
-  "#{id}-#{first\_name.downcase.parameterize}-#{last\_name.downcase.parameterize}"
+  "#{id}-#{first_name.downcase.parameterize}-#{last_name.downcase.parameterize}"
 end
 ```
 
@@ -110,7 +110,7 @@ end
 
 A static template could look like:
 
-```xml
+```ruby
 xml.instruct!
 xml.urlset :xmlns => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
   xml.url do
@@ -129,7 +129,7 @@ end
 
 The custom template for Zones just uses a different URL:
 
-```xml
+```ruby
 xml.instruct!
 xml.urlset :xmlns => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
   #
@@ -146,7 +146,7 @@ end
 
 And the one for "classes" is just iterating through fixed values:
 
-```xml
+```ruby
 xml.instruct!
 xml.urlset :xmlns => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
   #
@@ -184,6 +184,17 @@ def show
     return
   end
 end
+```
+
+### robots.txt
+
+You will want to add some content to your robots.txt to allow for automatic sitemap
+discovery.
+
+```text
+User-Agent: *
+Disallow: /auth
+Sitemap: http://eq2mission.flame.org/sitemap.xml
 ```
 
 ## Authors
