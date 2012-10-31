@@ -2,7 +2,7 @@ module GryphonSitemap
   module HasSitemap
     def has_sitemap(options = {})
       @sitemap_size = options[:per_page] || 5000
-      @sitemap_fields = options[:fields] || []
+      @sitemap_fields = Array(options[:fields] || [])
 
       extend ClassMethods
     end
@@ -16,7 +16,7 @@ module GryphonSitemap
       end
 
       def sitemap_page(page)
-        fields = @sitemap_fields + [:id, :updated_at]
+        fields = [:id, :updated_at] + @sitemap_fields
 
         query = order(:id).limit(@sitemap_size).select(fields).offset(page * @sitemap_size)
       end
