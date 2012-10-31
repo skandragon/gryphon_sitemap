@@ -3,7 +3,6 @@
 Adds a very simple sitemap generator for well-behaved classes.
 
 [![Build Status](https://secure.travis-ci.org/skandragon/gryphon_sitemap.png?branch=master)](http://travis-ci.org/skandragon/gryphon_sitemap)
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/skandragon/gryphon_sitemap)
 
 Generate Rails sitemaps and sitemap indexes for well-behaved models quickly and mostly painlessly.  In this context, a "sitemap" is what a search engine uses to find content on your site, and is required for "hidden" content.  For example, if you have a search field, indexing won't reach past that.  You could use GryphonSitemap to provide direct links to each item that could be returned in a search.
 
