@@ -81,7 +81,6 @@ class SitemapController < ApplicationController
   respond_to :xml
   
   def static
-    render :static
   end
 
   def classes
