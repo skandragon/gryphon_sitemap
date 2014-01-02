@@ -7,7 +7,7 @@ xml.urlset :xmlns => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
     for item in @items
       xml.url do
         if item.is_a?Array
-          xml.loc.polymorphic_url(*item)
+          xml.loc polymorphic_url(*item)
         else
           xml.loc polymorphic_url(item)
         end
