@@ -19,7 +19,7 @@ module GryphonSitemap
     end
 
     private
-    
+
     def indexed_pages_cached
       @cached_indexes ||= indexed_pages
     end
